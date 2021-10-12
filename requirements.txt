@@ -1,0 +1,13 @@
+torch
+torchvision
+tensorflow
+tqdm
+pandas
+numpy
+scipy
+chumpy
+scikit-image
+imageio
+dominate
+torchfile
+ffmpeg

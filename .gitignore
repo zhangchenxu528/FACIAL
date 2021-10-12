@@ -1,0 +1,151 @@
+# my data
+output_graph.pb
+Gen-20-0.0006273046686902202.mdl
+train3.npz
+audio2face/checkpoint/obama/
+examples/rendering/
+examples/test_image/
+examples/test_result/
+face2vid/checkpoints/train3
+face2vid/models/spynet_models/
+.ipynb_checkpoints/
+# gen files
+test/*/obj/
+test/*/libs/
+
+# data
+smplx/data1/
+smplx/datasets/
+smplx/smplntex/smplpix_logs_mydata/
+smplx/smplify-x/src
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle files
+.gradle/
+build/
+__pycache__/
+.gradle/
+.idea/
+**/.idea
+
+# vscode ide related
+.settings/
+.classpath
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.lib
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+*~
+.history
+**/xcshareddata/
+
+*.lock
+.DS_Store
+*.sw[onp]
+build/
+
+# IDE
+.vscode
+.project
+.cproject
+/.clangd
+.cache/
+.clangd/
+compile_commands.json
+
+# pod lock file
+*.lock
+Pods
+
+bingo.iml
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+!third_party/assimp/lib/*.a
+!demo/demo_assets/**/*.obj
+!demo/ios/assets/**
+demo/ios/assets/**/*.DS_Store
+demo/xcode-mac-demo/
+
+third_party/eigen/
+third_party/protobuf-lib/
+third_party/imgui/
+third_party/slam_lib/
+
+android_deps/
+
+pub/
+output/
+
+# Linux build files
+linux_deps/
+
+# Bingo test files
+projects/macos/Build
+projects/macos/Index
+
+# Release folder
+release
+
+# CLION build folder
+cmake-build-debug
+cmake-build-release
+
+# Ninja
+**.ninja_deps
+**.ninja_log
+**build.ninja
+**rules.ninja
+
+# Cmake files
+**CMakeCache.txt
+**CMakeFiles/
+**cmake_install.cmake
+**install_manifest.txt
+
+bingo_research
