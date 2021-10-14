@@ -18,7 +18,7 @@ PyTorch implementation for the paper:
 
 
 ## Run demo on Google Colab 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1iQiQeFAPoQ0jO1dstPHJDvaTJRV9uE9O)
 
 
 ## Requirements
