@@ -39,8 +39,8 @@ def process_audio(ds_path, audio, fps):
     return processed_audio
 
 fps = 30                                                                        #frame rate, same, do not need change
-dataset_path = '../examples/audio'                         # The root of my audios, inside is cliton, obama....
-subjects = [subj.split('/')[-1] for subj in glob.glob(dataset_path + '/*')]     # names
+dataset_path = '../examples/'                         # The root of my audios, inside is cliton, obama....
+subjects = ['audio']     # names
 # audio_list = glob.glob(os.path.join(dataset_path, '*/audio/*.wav'))
 ds_fname = 'ds_graph/output_graph.pb'  # deep speech model
 
@@ -52,22 +52,16 @@ for subject in subjects:
     tmp_audio = {}
     for audio_fname in audio_list:
         sentence = audio_fname.split('/')[-1][0:-4]                             # get wav name
-        # #extract audio
-        # audio_fname = os.path.join('data/audio', subject + '.wav')
-        # cmd = "ffmpeg -i " + subject + ' ' + audio_fname
-        # process = subprocess.run(cmd.split)
-        #read audio and process audio
+
         sample_rate, audio = wavfile.read(audio_fname)                          # read wav file
         tmp_audio[sentence] = {'audio':audio, 'sample_rate': sample_rate}
     audio4deepspeech[subject] = tmp_audio                                       # save format names(obama), video(0-ZCDAUSH)
-    # 3dmm_file = os.path.join('data/vidtimit_deep3dface', subject + '.pickle')
 
-# print '========Running deep speech...'
 processed_audio = process_audio(ds_fname, audio4deepspeech, fps)                # generate audio feature
 
-# print '========Storing processed audio...'
+
 for subject in processed_audio.keys():                                          # save audio file
-    out_path = os.path.join('../examples/audio_preprocessed', subject)   
+    out_path = '../examples/audio_preprocessed' 
     if not os.path.exists(out_path):
         os.makedirs(out_path)
     for sentence in processed_audio[subject]:
