@@ -142,7 +142,8 @@ net_params = opt.net_params_path
 
 netparams = np.load(open(net_params, 'rb'))
 netparams = netparams['face']
-
+std2 = np.std(netparams, axis=0)
+mean2 = np.mean(netparams,axis=0)
 
 for i in range(6):
 	netparams[:,i] = netparams[:,i]*std1[i]+mean1[i]
@@ -151,7 +152,7 @@ for i in range(6):
 from scipy.signal import savgol_filter
 netparams = savgol_filter(netparams, 7, 3, axis=0)
 
-np.savez(opt.net_params_path, face = netparams)
+# np.savez(opt.net_params_path, face = netparams)
 
 idparams = realparams[0,71:151]
 texparams = realparams[0,151:231]
@@ -182,9 +183,10 @@ if not os.path.exists(save_folder):
 	os.makedirs(save_folder)
 
 for i in range(1,netparams.shape[0]+1):
+	print(i)
 	chi_next = netparams[i-1,:].copy() 
-	# if i>3 and i<netparams.shape[0]-2:
-	# 	for j in range(6):
-	# 		chi_next[j] = np.sum([netparams[i-3,j], netparams[i-2,j], netparams[i-1,j], netparams[i,j], netparams[i+1,j]]*gaosifilter)
-	image = render(facemodel,chi_next)
+	if i>3 and i<netparams.shape[0]-2:
+		for j in range(6):
+			chi_next[j] = np.sum([netparams[i-3,j], netparams[i-2,j], netparams[i-1,j], netparams[i,j], netparams[i+1,j]]*gaosifilter)
+	image = render(facemodel,chi_next).astype(np.uint8)
 	io.imsave(os.path.join(save_folder,str("%06d"%(i))+'.jpg'), image)
