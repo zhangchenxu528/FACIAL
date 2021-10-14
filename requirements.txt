@@ -1,6 +1,6 @@
 torch
 torchvision
-tensorflow
+tensorflow == 1.14.0
 tqdm
 pandas
 numpy
@@ -11,3 +11,4 @@ imageio
 dominate
 torchfile
 ffmpeg
+python_speech_features
