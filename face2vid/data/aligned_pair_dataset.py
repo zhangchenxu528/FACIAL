@@ -26,7 +26,7 @@ class AlignedPairDataset(BaseDataset):
         # blinkinfo=pd.read_csv(blink_path)
         # aublink = blinkinfo[' AU45_r'].values
 
-        blink_path = '../examples/test-result/obama2.npz'
+        blink_path = '../examples/test-result/'+opt.test_id_name+'.npz'
         netparams = np.load(open(blink_path, 'rb'))
         netparams = netparams['face']
 
