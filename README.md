@@ -40,9 +40,6 @@ pip install -r requirements.txt
 conda install opencv
 ```
 
-
-
-
 ## Citation
 ```
 @inproceedings{zhang2021facial,
@@ -54,4 +51,6 @@ conda install opencv
 }
 ```
 
+## Acknowledgments
+We use [Deep3DFaceReconstruction](https://github.com/microsoft/Deep3DFaceReconstructionh) for face reconstruction, [DeepSpeech](https://github.com/mozilla/DeepSpeech) and [VOCA](https://github.com/TimoBolkart/voca) for audio feature extraction, and [3dface](https://github.com/YadiraF/face3d) for face rendering. Rendering-to-video module borrows heavily from [everybody-dance-now](https://github.com/Lotayou/everybody_dance_now_pytorch). 
 
