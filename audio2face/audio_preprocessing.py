@@ -39,7 +39,7 @@ def process_audio(ds_path, audio, fps):
     return processed_audio
 
 fps = 30                                                                        #frame rate, same, do not need change
-dataset_path = '/media/cgalab/zcx/real/audio'                         # The root of my audios, inside is cliton, obama....
+dataset_path = '../examples/audio'                         # The root of my audios, inside is cliton, obama....
 subjects = [subj.split('/')[-1] for subj in glob.glob(dataset_path + '/*')]     # names
 # audio_list = glob.glob(os.path.join(dataset_path, '*/audio/*.wav'))
 ds_fname = 'ds_graph/output_graph.pb'  # deep speech model
@@ -47,7 +47,7 @@ ds_fname = 'ds_graph/output_graph.pb'  # deep speech model
 audio4deepspeech = {}
 
 # print 'Loading audio for preprocessing...'
-for subject in [subjects[9]]:
+for subject in subjects:
     audio_list = glob.glob(os.path.join(dataset_path, subject + '/*.wav'))      # subject file location
     tmp_audio = {}
     for audio_fname in audio_list:
@@ -67,7 +67,7 @@ processed_audio = process_audio(ds_fname, audio4deepspeech, fps)                
 
 # print '========Storing processed audio...'
 for subject in processed_audio.keys():                                          # save audio file
-    out_path = os.path.join('/media/cgalab/zcx/real/audio_preprocessed', subject)   
+    out_path = os.path.join('../examples/audio_preprocessed', subject)   
     if not os.path.exists(out_path):
         os.makedirs(out_path)
     for sentence in processed_audio[subject]:
