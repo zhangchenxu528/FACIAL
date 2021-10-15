@@ -35,7 +35,7 @@ from skimage.io import imsave
 
 img_root = '../examples/test_image/'+opt.test_id_name
 if not os.path.exists(img_root):
-    os.mkdir(img_root)
+    os.makedirs(img_root)
 
 for i, data in enumerate(dataset):
     print(i)
