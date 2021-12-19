@@ -6,7 +6,7 @@ from scipy.signal import savgol_filter
 import argparse
 
 parser = argparse.ArgumentParser(description='netface_setting')
-parser.add_argument('--param_folder', type=str, default='../audio2face/data/train3.npz')
+parser.add_argument('--param_folder', type=str, default='/content/FACIAL/video_preprocess/train1_deep3Dface')
 
 opt = parser.parse_args()
 
