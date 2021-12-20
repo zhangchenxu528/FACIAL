@@ -1,6 +1,5 @@
 torch
 torchvision
-tensorflow == 1.14.0
 tqdm
 pandas
 numpy
