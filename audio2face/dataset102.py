@@ -53,7 +53,7 @@ class Facial_Dataset(Dataset):
 
             self.dataset_audio.append(audio)
             self.dataset_exp_param.append(np.concatenate(( params[:,:6], aublink, params[:,7:71]),axis=1))
-            self.dataset_idx += list(np.arange(0, min_num_frame-self.frames, 1) + base)
+            self.dataset_idx += list(np.arange(0, min_num_frame-self.frames, 5) + base)
             base+= min_num_frame
 
 
