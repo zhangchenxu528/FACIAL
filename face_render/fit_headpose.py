@@ -28,9 +28,6 @@ kpt_ind = facemodel.keypoints
 triangles = facemodel.tri
 
 
-trainname = 'test3'
-
-video_path = opt.video_path
 csv_path = opt.csv_path
 csvinfo=pd.read_csv(csv_path)
 num_image = len(csvinfo)
