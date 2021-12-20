@@ -156,11 +156,13 @@ facemodel.tex = texparams
 facemodel.gamma = gammaparams
 
 for i in range(1,realparams.shape[0]+1):
+	if i %1000 == 0:
+		print(i)
 	chi_next = realparams[i-1,:71].copy() 
 	if i>3 and i<realparams.shape[0]-2:
 		for j in range(6):
 			chi_next[j] = np.sum([realparams[i-3,j], realparams[i-2,j], realparams[i-1,j], realparams[i,j], realparams[i+1,j]]*gaosifilter)
-	image = render(facemodel,chi_next)
+	image = render(facemodel,chi_next).astype(np.uint8)
 
 	save_folder = opt.outpath
 	if not os.path.exists(save_folder):
