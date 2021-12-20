@@ -56,7 +56,8 @@ headpose = np.zeros((num_image,258),dtype=np.float32)
 base = int(csvinfo.iloc[0]['frame'])-1
 # --- 2. fit head pose for each frame
 for frame_count in range(1,num_image+1):
-    print(frame_count)
+    if frame_count % 1000 == 0:
+        print(frame_count)
     subcsvinfo = csvinfo[csvinfo['frame']==frame_count+base]
     x = np.zeros((68,2),dtype=np.float32)
     for i in range(68):
