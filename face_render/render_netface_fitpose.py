@@ -11,8 +11,8 @@ import pandas as pd
 import argparse
 
 parser = argparse.ArgumentParser(description='Render_setting')
-parser.add_argument('--real_params_path', type=str, default='/content/FACIAL/video_preprocess/train1_posenew.npz')
-parser.add_argument('--outpath', type=str, default = '/content/FACIAL/video_preprocess/train_A/')
+parser.add_argument('--real_params_path', type=str, default='../video_preprocess/train1_posenew.npz')
+parser.add_argument('--outpath', type=str, default = '../video_preprocess/train_A/')
 
 opt = parser.parse_args()
 
