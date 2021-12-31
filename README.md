@@ -17,7 +17,8 @@ PyTorch implementation for the paper:
 > ICCV 2021
 
 ## Update: train a new person on Google Colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Z1tFPFf-O_HpaxshTqKM24TC_rrjR7Xc?usp=sharing)
+# Adding some explanation, unofficially.
+[![Open In Colab](https://colab.research.google.com/drive/12UsgMpusNJA6PEpgNn8S_hvmHDxVVfEg?usp=sharing)]
 
 
 ## Run the test demo on Google Colab 
