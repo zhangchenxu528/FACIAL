@@ -18,7 +18,7 @@ PyTorch implementation for the paper:
 
 ## Update: train a new person on Google Colab
 # Adding some explanation, unofficially.
-[![Open In Colab](https://colab.research.google.com/drive/12UsgMpusNJA6PEpgNn8S_hvmHDxVVfEg?usp=sharing)]
+[![Open In Colab](https://colab.research.google.com/drive/12UsgMpusNJA6PEpgNn8S_hvmHDxVVfEg#scrollTo=hhZDUdiPJPJ6)]
 
 
 ## Run the test demo on Google Colab 
