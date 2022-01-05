@@ -22,15 +22,18 @@ class AlignedPairDataset(BaseDataset):
         self.dir_B = os.path.join(opt.dataroot, opt.phase + dir_B)
         self.B_paths = sorted(make_dataset(self.dir_B))
         
-        # blink_path = '/media/cgalab/zcx/CVPR-test-video/test/test3/test3_openface/test3_512_audio.csv'
-        # blinkinfo=pd.read_csv(blink_path)
-        # aublink = blinkinfo[' AU45_r'].values
+        if opt.phase == 'train':
+            # blink_path = '/media/cgalab/zcx/CVPR-test-video/test/test3/test3_openface/test3_512_audio.csv'
+            blink_path = opt.blink_path
+            blinkinfo=pd.read_csv(blink_path)
+            aublink = blinkinfo[' AU45_r'].values
+        else:
+            # blink_path = '../examples/test-result/'+opt.test_id_name+'.npz'
+            blink_path = opt.blink_path
+            netparams = np.load(open(blink_path, 'rb'))
+            netparams = netparams['face']
 
-        blink_path = '../examples/test-result/'+opt.test_id_name+'.npz'
-        netparams = np.load(open(blink_path, 'rb'))
-        netparams = netparams['face']
-
-        aublink = netparams[:,6]
+            aublink = netparams[:,6]
         print(aublink.shape)
         self.trainaublink = aublink[:]
 
