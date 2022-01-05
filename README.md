@@ -15,8 +15,7 @@ PyTorch implementation for the paper:
 > Xiaohu Guo
 >
 > ICCV 2021
-
-
+>
 > [[Paper]](https://arxiv.org/abs/2108.07938) 
 > [[Video]](https://www.youtube.com/watch?v=hl9ek3bUV1E) 
 > [[Website]](https://personal.utdallas.edu/~xguo/) 
