@@ -16,6 +16,12 @@ PyTorch implementation for the paper:
 >
 > ICCV 2021
 
+
+> [[Paper]](https://arxiv.org/abs/2108.07938) 
+> [[Video]](https://www.youtube.com/watch?v=hl9ek3bUV1E) 
+> [[Website]](https://personal.utdallas.edu/~xguo/) 
+
+
 ## Update: train a new person on Google Colab
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Z1tFPFf-O_HpaxshTqKM24TC_rrjR7Xc?usp=sharing)
 
