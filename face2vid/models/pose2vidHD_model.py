@@ -97,11 +97,11 @@ class Pose2VidHDModel(BaseModel):
             if not opt.no_vgg_loss:             
                 self.criterionVGG = networks.VGGLoss(self.gpu_ids)
 
-            if not opt.no_flow_loss:
-                # 20181013 Flow L1 needs averaging
-                self.nelem = 288*512 if opt.dataroot.find('512') != -1 else 576*1024
-                # print(self.nelem / 512) 
-                self.criterionFlow = networks.FlowLoss(self.gpu_ids)
+            # if not opt.no_flow_loss:
+            #     # 20181013 Flow L1 needs averaging
+            #     self.nelem = 288*512 if opt.dataroot.find('512') != -1 else 576*1024
+            #     # print(self.nelem / 512) 
+            #     self.criterionFlow = networks.FlowLoss(self.gpu_ids)
                 
             # Names so we can breakout loss
             self.loss_names = self.loss_filter('G_GAN', 'G_GAN_Feat', 'G_VGG', 'G_flow', 'D_real', 'D_fake')
