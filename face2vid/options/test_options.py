@@ -17,4 +17,5 @@ class TestOptions(BaseOptions):
         self.parser.add_argument("--onnx", type=str, help="run ONNX model via TRT")
         self.parser.add_argument('--use_first_frame', action='store_true', help='If enabled, use first ground truth frame')
         self.parser.add_argument('--blink_path', type=str, default='../examples/test-result/obama2.npz')
+        self.parser.add_argument('--test_id_name', type=str, default='obama2')
         self.isTrain = False
