@@ -22,7 +22,8 @@ PyTorch implementation for the paper:
 
 
 ## Update: train a new person on Google Colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Z1tFPFf-O_HpaxshTqKM24TC_rrjR7Xc?usp=sharing)
+# Adding some explanation, unofficially.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12UsgMpusNJA6PEpgNn8S_hvmHDxVVfEg#scrollTo=qc6ZZ5PW8ftU)
 
 
 ## Run the test demo on Google Colab 
